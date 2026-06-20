@@ -32,14 +32,22 @@ header{
     align-items: center;
 
 }
-header img{
+header .img{
+    background-color: var(--secondary-txt);
+    height: 100px;
+    width: 200px;
+
     grid-column: 1 / 2;
-    padding-left: 50px;
+    justify-self: center;
+    align-self: center;
 }
 header nav{
     grid-column: -2 / 4;
+    justify-self: center;
+    align-self: center;
 }
 nav i{
     color: var(--accent);
-    font-size: 2.5em;
+    font-size: 2em;
+    
 }
