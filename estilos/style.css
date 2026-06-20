@@ -39,6 +39,7 @@ header img{
 header nav{
     grid-column: -2 / 4;
 }
-i{
+nav i{
     color: var(--accent);
+    font-size: 2.5em;
 }
