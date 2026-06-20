@@ -1,7 +1,14 @@
 @charset "UTF-8";
 
 :root{
-
+    --primary-bg: #0D0D0D;
+    --secondary-bg: #171717;
+    --card-bg: #222222;
+    --borders: #685a28;
+    --primary-txt: #F2E8D5;
+    --secondary-txt: #B8B0A0;
+    --accent: #990800;
+    --accent-hover: #C20A00; 
 }
 
 
@@ -10,4 +17,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-bg);
+}
+header{
+    background-color: var(--secondary-bg);
+    height: 100px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    align-items: center;
+
+}
+header img{
+    grid-column: 1 / 2;
+    padding-left: 50px;
+}
+header nav{
+    grid-column: -2 / 4;
+}
+i{
+    color: var(--accent);
 }
