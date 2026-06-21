@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root{
     --primary-bg: #0D0D0D;
     --secondary-bg: #171717;
@@ -70,6 +71,10 @@ main{
     color: var(--primary-txt);
     justify-self: center;
 }
+.banner-text h1{
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.55);
+}
 .banner-btn-container{
     justify-self: center;
     margin-bottom: 5px;
@@ -82,6 +87,7 @@ main{
     border: 1px solid var(--primary-txt) ;
     background-color: var(--accent);
     color: var(--primary-txt);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 } 
 .btn-banner:hover{
     background-color: var(--accent-hover);
