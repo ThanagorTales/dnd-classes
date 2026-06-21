@@ -92,6 +92,7 @@ main{
     background-color: var(--accent);
     color: var(--primary-txt);
     box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    font-weight: bold;
 } 
 .btn-banner:hover{
     background-color: var(--accent-hover);
@@ -139,9 +140,46 @@ main{
     color: var(--primary-txt);
     box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
     justify-self: center;
+    font-weight: bold;
 } 
 .class-btn:hover{
     background-color: var(--accent-hover);
     border: 1px solid var(--secondary-txt);
     cursor: pointer;
+}
+#classes-cards{
+    display: grid;
+    grid:  repeat(3, 1fr)  /  repeat(4, 1fr) ;
+    gap: 5px;
+    justify-items: center;
+
+    background-color: var(--card-bg);
+}
+#classes-cards img{
+    height: 100px;
+    width: 100px;
+    
+}
+.choosen{
+    background-color: var(--borders);
+    border-radius: 10px;
+}
+
+
+footer{
+    background-color: var(--primary-bg);
+    color: var(--secondary-txt);
+    font-size: 1.1em;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+footer a{
+    text-decoration: none;
+    color: var(--secondary-txt);
+}
+footer a:hover{
+    text-decoration: underline;
+    color: var(--borders);
 }
