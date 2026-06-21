@@ -59,7 +59,32 @@ main{
 #banner{
     display: grid;
     grid-template-rows: 2fr 1fr;
-
-    background: url("../images/campfire-party.jpg") no-repeat center center;
+    align-items: center;
+    gap: 5px;
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)), url("../images/campfire-party.jpg") no-repeat center center;
     background-size: cover;
+}
+
+.banner-text{
+    color: var(--primary-txt);
+    justify-self: center;
+}
+.banner-btn-container{
+    justify-self: center;
+    margin-bottom: 5px;
+}
+.btn-banner{
+    height: 50px;
+    width: 150px;
+    white-space: wrap;
+    border-radius: 10px;
+    border: 1px solid var(--primary-txt) ;
+    background-color: var(--accent);
+    color: var(--primary-txt);
+} 
+.btn-banner:hover{
+    background-color: var(--accent-hover);
+    border: 1px solid var(--secondary-txt);
+    cursor: pointer;
 }
