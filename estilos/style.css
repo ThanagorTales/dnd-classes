@@ -50,12 +50,16 @@ nav i{
     color: var(--accent);
     font-size: 1.5em;
 }
+nav i:hover{
+    color: var(--accent-hover);
+    cursor: pointer;
+}
 
 main{
     height: 90vh;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
-    gap: 20px;
+
 }
 #banner{
     display: grid;
@@ -90,6 +94,53 @@ main{
     box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 } 
 .btn-banner:hover{
+    background-color: var(--accent-hover);
+    border: 1px solid var(--secondary-txt);
+    cursor: pointer;
+}
+
+#class-display{
+    display: grid;
+    grid-template-columns: auto 2fr 1fr auto;
+    grid-template-rows: auto 2fr auto;
+
+    gap: 5px;
+    align-items: center;
+    background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center top;
+    background-size: cover;
+}
+.class-description {
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--primary-txt);
+}
+.class-description h1{
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.class-description p{
+    text-indent: .5em;
+    margin-bottom: 10px;
+}
+.class-btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-txt) ;
+    background-color: var(--accent);
+    color: var(--primary-txt);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    justify-self: center;
+} 
+.class-btn:hover{
     background-color: var(--accent-hover);
     border: 1px solid var(--secondary-txt);
     cursor: pointer;
