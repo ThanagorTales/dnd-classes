@@ -60,7 +60,6 @@ nav i:hover{
 }
 
 main{
-    flex: 1;
     display: grid;
     grid-template-rows: auto auto auto;
 
@@ -160,10 +159,9 @@ main{
     background-color: var(--card-bg);
 }
 #classes-cards img{
-    height: 100px;
-    margin: 0;
-    padding: 0;
-    
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .choosen{
     background-color: var(--borders);
@@ -176,7 +174,6 @@ footer{
     color: var(--secondary-txt);
     font-size: 1.1em;
     text-align: center;
-    padding: 5px;
     margin-top: 5px;
     font-weight: bolder;
 }
