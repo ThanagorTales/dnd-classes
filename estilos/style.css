@@ -22,6 +22,10 @@
 
 body{
     background-color: var(--primary-bg);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 }
 header{
     background-color: var(--secondary-bg);
@@ -56,9 +60,9 @@ nav i:hover{
 }
 
 main{
-    height: 90vh;
+    flex: 1;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: auto auto auto;
 
 }
 #banner{
@@ -156,8 +160,9 @@ main{
     background-color: var(--card-bg);
 }
 #classes-cards img{
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    margin: 0;
+    padding: 0;
     
 }
 .choosen{
