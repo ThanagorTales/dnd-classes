@@ -104,7 +104,7 @@ main{
 }
 
 #class-display{
-    min-height: 40vh;
+    min-height: 45vh;
     display: grid;
     grid-template-columns: auto 2fr 1fr auto;
     grid-template-rows: auto 2fr auto;
@@ -150,18 +150,21 @@ main{
     border: 1px solid var(--secondary-txt);
     cursor: pointer;
 }
+
+#cards-container{
+
+}
 #classes-cards{
     display: grid;
     grid:  repeat(3, 1fr)  /  repeat(4, 1fr) ;
-    gap: 5px;
-    justify-items: center;
-
+    
     background-color: var(--card-bg);
 }
 #classes-cards img{
-    width: 100%;
+    width: 80%;
     height: auto;
     display: block;
+    margin: auto;
 }
 .choosen{
     background-color: var(--borders);
