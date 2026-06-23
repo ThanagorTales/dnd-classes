@@ -5,7 +5,7 @@
     --primary-bg: #0D0D0D;
     --secondary-bg: #171717;
     --card-bg: #222222;
-    --borders: #685a28;
+    --borders: #947e2fe3;
     --primary-txt: #F2E8D5;
     --secondary-txt: #B8B0A0;
     --accent: #990800;
@@ -61,7 +61,8 @@ nav i:hover{
 
 main{
     display: grid;
-    grid-template-columns: auto 90vw auto;
+    grid-template-columns: auto 95vw auto;
+    border-radius: 0 0 10px 10px;
 
 }
 #banner{
@@ -74,6 +75,7 @@ main{
     
     background: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)), url("../images/campfire-party.jpg") no-repeat center center;
     background-size: cover;
+
 }
 
 .banner-text{
@@ -157,12 +159,14 @@ main{
 
 #cards-container{
     grid-column: 2;
+    
 }
 #classes-cards{
     display: grid;
     grid:  repeat(3, 1fr)  /  repeat(4, 1fr) ;
     
     background-color: var(--card-bg);
+    border-radius: 0 0 10px 10px;
 }
 #classes-cards img{
     width: 80%;
@@ -171,13 +175,14 @@ main{
     margin: auto;
 }
 .choosen{
-    background-color: var(--borders);
+    background-color: var(--secondary-bg);
     border-radius: 10px;
+    border: 2px solid var(--borders);
 }
 
 
 footer{
-    background-color: var(--primary-bg);
+    background-color: var(--secondary-bg);
     color: var(--secondary-txt);
     font-size: 1.1em;
     text-align: center;
