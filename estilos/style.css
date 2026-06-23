@@ -61,10 +61,12 @@ nav i:hover{
 
 main{
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: auto 90vw auto;
 
 }
 #banner{
+    grid-column: 2;
+
     display: grid;
     grid-template-rows: 2fr 1fr;
     align-items: center;
@@ -104,6 +106,8 @@ main{
 }
 
 #class-display{
+    grid-column: 2;
+
     min-height: 35vh;
     display: grid;
     grid-template-columns: auto 2fr 1fr auto;
@@ -152,7 +156,7 @@ main{
 }
 
 #cards-container{
-
+    grid-column: 2;
 }
 #classes-cards{
     display: grid;
