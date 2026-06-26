@@ -22,13 +22,11 @@
 
 body{
     background-color: var(--primary-bg);
-    min-height: 100vh;
 
-    display: grid;
-    grid-template: auto 90vh auto / auto 95vw auto;
+
+    
 }
 header{
-    grid-area: 1 / 1 / 2 / -1;
 
     background-color: var(--secondary-bg);
     height: 50px;
@@ -62,12 +60,10 @@ nav i:hover{
 }
 
 main{
-    grid-area: 2 / 2 / 3 / 2;
-
     display: grid;
-    grid-template-rows: 1fr repeat(2, 2fr);
-    border-radius: 10px;
-    border: solid 1px white;
+    grid-template-columns: auto 90vw auto;
+
+
 }
 #banner{
     grid-column: 2;
@@ -167,7 +163,7 @@ main{
 }
 #classes-cards{
     display: grid;
-    grid:  repeat(3, 1fr)  /  repeat(4, 1fr) ;
+    grid: repeat(3, 1fr) / repeat(4, 1fr); 
     
     background-color: var(--card-bg);
    
@@ -186,14 +182,13 @@ main{
 
 
 footer{
-    grid-area: 3 / 1 / -1 / -1;
-
     background-color: var(--secondary-bg);
     color: var(--secondary-txt);
     font-size: 1.1em;
     text-align: center;
-    margin-top: 5px;
     font-weight: bolder;
+    padding: 5px;
+    margin-top: 5px;
 }
 footer a{
     text-decoration: none;
