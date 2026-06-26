@@ -24,10 +24,12 @@ body{
     background-color: var(--primary-bg);
     min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template: auto 90vh auto / auto 95vw auto;
 }
 header{
+    grid-area: 1 / 1 / 2 / -1;
+
     background-color: var(--secondary-bg);
     height: 50px;
     padding: 0 20px;
@@ -60,10 +62,12 @@ nav i:hover{
 }
 
 main{
-    display: grid;
-    grid-template-columns: auto 95vw auto;
-    border-radius: 0 0 10px 10px;
+    grid-area: 2 / 2 / 3 / 2;
 
+    display: grid;
+    grid-template-rows: 1fr repeat(2, 2fr);
+    border-radius: 10px;
+    border: solid 1px white;
 }
 #banner{
     grid-column: 2;
@@ -166,7 +170,7 @@ main{
     grid:  repeat(3, 1fr)  /  repeat(4, 1fr) ;
     
     background-color: var(--card-bg);
-    border-radius: 0 0 10px 10px;
+   
 }
 #classes-cards img{
     width: 80%;
@@ -182,6 +186,8 @@ main{
 
 
 footer{
+    grid-area: 3 / 1 / -1 / -1;
+
     background-color: var(--secondary-bg);
     color: var(--secondary-txt);
     font-size: 1.1em;
