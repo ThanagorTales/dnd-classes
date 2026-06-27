@@ -206,15 +206,13 @@ footer a:hover{
         min-height: 30vh;
         border-radius: 0 0 10px 10px;
     }
-    #classes-cards{
+    #class-display{
         grid-area: 2 / 3 / 4 / 4;
+    }
+    #classes-cards{
+        grid-area: 2 / 2 / 4 / 3;
 
         border-radius: 10px;
-    }
-    #cards-container{
-        grid-area: 2 / 2 / 4 / 3;
-        border-radius: 10px;
-        overflow: hidden;
     }
 
     .banner-text{
