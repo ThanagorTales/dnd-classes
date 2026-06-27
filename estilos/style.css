@@ -76,7 +76,7 @@ main{
     align-items: center;
     gap: 5px;
 
-    background: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)), url("../images/campfire-party.jpg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)), url("../images/campfire-party.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -118,7 +118,7 @@ main{
     grid-template-rows: auto 2fr auto;
     gap: 5px;
     align-items: center;
-    background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center top;
+    background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat  top;
     background-size: cover;
 }
 .class-description {
@@ -131,7 +131,7 @@ main{
 
     padding: 10px;
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.6);
     color: var(--primary-txt);
 }
 .class-description h1{
@@ -235,7 +235,7 @@ footer a:hover{
     #class-display{
         grid-area: 2 / 3 / 4 / 4;border-radius: 10px;
 
-        background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center right;
+        background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center;
         background-size: cover;
     }
     #classes-cards{
