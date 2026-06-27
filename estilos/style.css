@@ -2,7 +2,7 @@
 
 
 :root{
-    --primary-bg: #0D0D0D;
+    --primary-bg: #0d0d0dc9;
     --secondary-bg: #171717;
     --card-bg: #222222;
     --borders: #947e2fe3;
@@ -209,6 +209,7 @@ footer{
     font-weight: bolder;
     padding: 5px;
     margin-top: 5px;
+    background-color: var(--secondary-bg);
 }
 footer a{
     text-decoration: none;
