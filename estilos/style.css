@@ -62,7 +62,7 @@ nav i:hover{
 main{
     display: grid;
     grid-template-columns: auto 90vw auto;
-
+    min-height: 90vh;
 
 }
 #banner{
@@ -158,12 +158,9 @@ main{
     cursor: pointer;
 }
 
-#cards-container{
-    grid-column: 2;
-  
-    
-}
 #classes-cards{
+    grid-column: 2;
+
     display: grid;
     grid: repeat(3, 1fr) / repeat(4, 1fr); 
     
@@ -206,10 +203,10 @@ footer a:hover{
     }
     #banner{
         grid-area: 1 / 2 / 2 / 4;
-        min-height: 35vh;
+        min-height: 30vh;
         border-radius: 0 0 10px 10px;
     }
-    #class-display{
+    #classes-cards{
         grid-area: 2 / 3 / 4 / 4;
 
         border-radius: 10px;
@@ -220,5 +217,24 @@ footer a:hover{
         overflow: hidden;
     }
 
-    
+    .banner-text{
+        font-size: 2em;
+    }
+    .btn-banner{
+    height: 75px;
+    width: 250px;
+    white-space: wrap;
+    border-radius: 10px;
+    border: 2px solid var(--primary-txt) ;
+    background-color: var(--accent);
+    color: var(--primary-txt);
+    box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    font-size: 1.5em;
+} 
+.btn-banner:hover{
+    background-color: var(--accent-hover);
+    border: 2px solid var(--secondary-txt);
+    cursor: pointer;
+}
 }
