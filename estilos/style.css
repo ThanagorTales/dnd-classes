@@ -165,8 +165,10 @@ main{
     grid-column: 2;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); 
-    gap: 1rem;
+    grid-template-columns:repeat(3, 1fr) ; 
+
+    max-width: 100%;
+    gap: .25rem;
     padding: 1rem;
     justify-items: center;
     align-items: center;
@@ -175,13 +177,17 @@ main{
     border-radius: 10px;
 }
 .class-icon{
-    width: 80px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 110px;
 }
 #classes-cards a {
+    width: 100%;
+    aspect-ratio: 1;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 10px;
     border-radius: 10px;
     transition: .2s;
@@ -225,12 +231,13 @@ footer a:hover{
         border-radius: 0 0 10px 10px;
     }
     #class-display{
-        grid-area: 2 / 3 / 4 / 4;
+        grid-area: 2 / 3 / 4 / 4;border-radius: 10px;
+
+        background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center right;
+    background-size: cover;
     }
     #classes-cards{
-        grid-area: 2 / 2 / 4 / 3;
-
-        border-radius: 10px;
+        grid-area: 2 / 2 / 4 / 3;border-radius: 10px;
     }
 
     .banner-text{
