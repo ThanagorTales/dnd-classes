@@ -72,10 +72,11 @@ main{
     grid-template-rows: 2fr 1fr;
     align-items: center;
     gap: 5px;
-    
+
+    min-height: 25vh;
+
     background: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)), url("../images/campfire-party.jpg") no-repeat center center;
     background-size: cover;
-
 }
 
 .banner-text{
@@ -159,6 +160,7 @@ main{
 
 #cards-container{
     grid-column: 2;
+  
     
 }
 #classes-cards{
@@ -166,7 +168,6 @@ main{
     grid: repeat(3, 1fr) / repeat(4, 1fr); 
     
     background-color: var(--card-bg);
-   
 }
 #classes-cards img{
     width: 80%;
@@ -182,7 +183,6 @@ main{
 
 
 footer{
-    background-color: var(--secondary-bg);
     color: var(--secondary-txt);
     font-size: 1.1em;
     text-align: center;
