@@ -198,3 +198,27 @@ footer a:hover{
     text-decoration: underline;
     color: var(--borders);
 }
+
+@media screen and (min-width: 768px){
+    main{
+        grid-template-columns: auto repeat(2, 45vw) auto;
+        gap: 10px;    
+    }
+    #banner{
+        grid-area: 1 / 2 / 2 / 4;
+        min-height: 35vh;
+        border-radius: 0 0 10px 10px;
+    }
+    #class-display{
+        grid-area: 2 / 3 / 4 / 4;
+
+        border-radius: 10px;
+    }
+    #cards-container{
+        grid-area: 2 / 2 / 4 / 3;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    
+}
