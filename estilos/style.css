@@ -179,7 +179,9 @@ main{
     width: 100%;
     max-width: 110px;
 }
-#classes-cards span {
+#classes-cards button {
+    background: none;
+    border: none;
     width: 100%;
 
     display: flex;
@@ -190,13 +192,15 @@ main{
     border-radius: 10px;
     transition: .2s;
 }
-#classes-cards span:hover{
+#classes-cards button:hover{
     background: var(--secondary-bg);
+    cursor: pointer;
 }
-.choosen{
+
+#classes-cards button.choosen{
     background-color: var(--primary-bg);
     border-radius: 10px;
-    border: 2px solid var(--borders);
+    box-shadow: 0 0 10px var(--borders);
 }
 
 
