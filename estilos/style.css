@@ -118,7 +118,7 @@ main{
     grid-template-rows: auto 2fr auto;
     gap: 5px;
     align-items: center;
-    background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat  top;
+    background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center top;
     background-size: cover;
 }
 .class-description {
@@ -235,8 +235,7 @@ footer a:hover{
     #class-display{
         grid-area: 2 / 3 / 4 / 4;border-radius: 10px;
 
-        background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center;
-        background-size: cover;
+        
     }
     #classes-cards{
         grid-area: 2 / 2 / 4 / 3;border-radius: 10px;
