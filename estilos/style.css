@@ -130,7 +130,7 @@ main{
 
     padding: 8px;
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.75);
     color: var(--primary-txt);
     border: solid 2px var(--primary-txt)
 }
