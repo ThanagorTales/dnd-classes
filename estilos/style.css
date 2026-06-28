@@ -117,7 +117,7 @@ main{
     grid-template-rows:  1fr .5fr ;
 
     align-items: center;
-    background: url("../images/class-portrait/wizard-portrait.jpg") no-repeat center top;
+    background: url("../images/class-portrait/barbarian-portrait.jpg") no-repeat center top;
     background-size: cover;
 }
 .class-description {
@@ -132,7 +132,7 @@ main{
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.55);
     color: var(--primary-txt);
-    border: solid 1px var(--secondary-txt)
+    border: solid 2px var(--primary-txt)
 }
 .class-description h1{
     margin-bottom: 5px;
