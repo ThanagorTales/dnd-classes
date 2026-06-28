@@ -17,7 +17,7 @@ btns.forEach(btn => {
 
         const className = btn.dataset.class;
         
-        display.style.backgroundImage =  `url("../images/class-portrait/${className}-portrait.jpg")`;
+        display.style.backgroundImage =  `url("images/class-portrait/${className}-portrait.jpg")`;
 
         title.textContent = classes[className].title;
         description.textContent = classes[className].description
