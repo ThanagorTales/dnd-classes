@@ -30,7 +30,7 @@ btns.forEach(btn => {
 const classes = {
     barbarian: {
         title: "Bárbaro:",
-        description: "Guerreiro feroz que luta com força bruta e entra em fúria para resistir a golpes e causar enorme dano. Usa armas pesadas, pouca armadura e inspira a imagem de um combatente selvagem, destemido e quase impossível de parar em batalha."
+        description: "Guerreiro feroz que luta com força bruta e em fúria para resistir a golpes e causar enorme dano. Usa armas pesadas, pouca armadura e inspira a imagem de um combatente selvagem, destemido e quase impossível de parar em batalha."
     },
 
     bard: {
@@ -63,7 +63,7 @@ const classes = {
     },
     rogue: {
         title: "Ladino:",
-        description: "Especialista em furtividade, precisão e astúcia. Ataca pontos fracos para causar muito dano, abre fechaduras, desarma armadilhas e resolve problemas com habilidade, agilidade e inteligência, evitando confrontos diretos."
+        description: "Especialista em furtividade, precisão e astúcia. Ataca pontos fracos para causar muito dano, abre fechaduras, desarma armadilhas e resolve problemas com habilidade, agilidade e inteligência."
     },
     sorcerer: {
         title: "Feiticeiro:",
