@@ -179,7 +179,7 @@ main{
     width: 100%;
     max-width: 110px;
 }
-#classes-cards a {
+#classes-cards span {
     width: 100%;
 
     display: flex;
@@ -190,7 +190,7 @@ main{
     border-radius: 10px;
     transition: .2s;
 }
-#classes-cards a:hover{
+#classes-cards span:hover{
     background: var(--secondary-bg);
 }
 .choosen{
