@@ -4,7 +4,8 @@ const btns = document.querySelectorAll(".class-card");
 const title = document.getElementById("class-title");
 const description = document.getElementById("class-text");
 
-
+let currentClass = "barbarian";
+const saibaMaisBtn = document.querySelector(".class-btn");
 
 btns.forEach(btn => {
     btn.addEventListener("click", () =>{
@@ -15,17 +16,20 @@ btns.forEach(btn => {
         
         btn.classList.add("choosen");
 
-        const className = btn.dataset.class;
+        currentClass = btn.dataset.class;
         
-        display.style.backgroundImage =  `url("images/class-portrait/${className}-portrait.jpg")`;
+        display.style.backgroundImage =  `url("images/class-portrait/${currentClass}-portrait.jpg")`;
 
-        title.textContent = classes[className].title;
-        description.textContent = classes[className].description
+        title.textContent = classes[currentClass].title;
+        description.textContent = classes[currentClass].description
     });
 
     
 });
 
+saibaMaisBtn.addEventListener("click", () =>{
+    window.location.href = `classes/${currentClass}.html`
+});
 
 const classes = {
     barbarian: {
