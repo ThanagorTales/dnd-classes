@@ -256,6 +256,26 @@ footer a:hover{
 }
 
 @media screen and (min-width: 768px){
+    header{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header .header-img{
+        grid-column: 2 / 3;
+        justify-self: center;
+        align-self: center;
+    }
+    .header-img{
+        height: 50px;
+        width: 150px;
+        
+        grid-column: 1 / 2;
+    }
+    header nav{
+        grid-column: 3 / 4;
+
+        display: flex;
+    }
+
     main{
         flex: 1;
 
@@ -266,24 +286,6 @@ footer a:hover{
 
         gap: 15px;    
     }
-
-    header{
-    grid-template-columns: repeat(4, 1fr);
-
-
-    }
-    header .header-img{
-        grid-column: 2 / 3;
-        justify-self: center;
-        align-self: center;
-    }
-    .header-img{
-    height: 50px;
-    width: 150px;
-    
-    grid-column: 1 / 2;
-    }
-    
     #banner{
         grid-area: 1 / 2 / 2 / 4;
         border-radius: 0 0 10px 10px;
@@ -301,16 +303,16 @@ footer a:hover{
         font-size: 2em;
     }
     .btn-banner{
-    height: 75px;
-    width: 250px;
-    white-space: wrap;
-    border-radius: 10px;
-    border: 2px solid var(--primary-txt) ;
-    background-color: var(--accent);
-    color: var(--primary-txt);
-    box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
-    font-weight: bold;
-    font-size: 1.5em;
+        height: 75px;
+        width: 250px;
+        white-space: wrap;
+        border-radius: 10px;
+        border: 2px solid var(--primary-txt) ;
+        background-color: var(--accent);
+        color: var(--primary-txt);
+        box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
+        font-weight: bold;
+        font-size: 1.5em;
 } 
     .btn-banner:hover{
         background-color: var(--accent-hover);
