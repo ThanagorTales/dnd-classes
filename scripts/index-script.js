@@ -1,3 +1,4 @@
+/*------------- start index main-------------*/
 const display = document.getElementById("class-display");
 const btns = document.querySelectorAll(".class-card");
 
@@ -83,3 +84,5 @@ const classes = {
     },
 
 }
+
+/*------------- end index main-------------*/
