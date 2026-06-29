@@ -245,6 +245,7 @@ nav i:hover{
     grid-template-columns: auto 90vw auto;
     min-height: 90vh;
     row-gap: 10px;
+
 }
 .class-img{
     grid-column: 2;
@@ -253,6 +254,8 @@ nav i:hover{
     border-radius: 10px;
     background: url("../images/class-portrait/barbarian-portrait.jpg") no-repeat center top;
     background-size: cover;
+
+    min-height: 200px;
 }
 .class-info{
     grid-column: 2;
