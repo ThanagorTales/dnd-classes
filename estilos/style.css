@@ -275,18 +275,24 @@ nav i:hover{
     padding-top: 10px;
     font-family: "Cinzel Decorative";
 }
-.class-description p{
+.class-description p, .class-info p{
     text-indent: 1.5em;
     padding: 10px;
-    text-align: justify;
     font-family: "Noto Sans";
-    line-height: 1.1em;
+    line-height: 1.3em;
 }
 .class-info{
     grid-column: 2;
 
     border-radius: 10px;
-    background-color: darkgreen;
+
+    color: var(--primary-txt);
+    background-color: var(--card-bg);
+}
+.class-info h3{
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Cinzel Decorative";
 }
 .class-table{
     grid-column: 2;
