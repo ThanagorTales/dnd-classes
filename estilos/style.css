@@ -282,6 +282,7 @@ nav i:hover{
     line-height: 1.3em;
 }
 .class-info{
+    /**/
     grid-column: 2;
 
     border-radius: 10px;
