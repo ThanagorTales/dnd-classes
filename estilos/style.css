@@ -262,7 +262,7 @@ nav i:hover{
     object-fit: cover;
     object-position: center top;
 }
-.class-info{
+.class-description{
     grid-column: 2;
 
     border-radius: 10px;
@@ -270,16 +270,19 @@ nav i:hover{
     color: var(--primary-txt);
     background-color: var(--card-bg);
 }
-.class-info h1{
+.class-description h1{
     text-align: center;
     padding-top: 10px;
+    font-family: "Cinzel Decorative";
 }
-.class-info p{
+.class-description p{
     text-indent: 1.5em;
     padding: 10px;
     text-align: justify;
+    font-family: "Noto Sans";
+    line-height: 1.1em;
 }
-.class-description{
+.class-info{
     grid-column: 2;
 
     border-radius: 10px;
