@@ -299,6 +299,22 @@ nav i:hover{
     font-family: "Cinzel Decorative";
     font-size: 1em;
 }
+.traits-table{
+    font-family: "Noto Sans";
+    text-align: center;
+
+    border: none;
+    border-collapse: collapse;
+    padding: 5px;    
+}
+.traits-table td{
+    
+}
+.traits-table tr:nth-child(even){
+    background-color: var(--primary-bg);
+}
+
+
 .class-table{
     grid-column: 2;
 
