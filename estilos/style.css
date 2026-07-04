@@ -269,6 +269,8 @@ nav i:hover{
 
     color: var(--primary-txt);
     background-color: var(--card-bg);
+
+    box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
 }
 .class-description h1{
     text-align: center;
@@ -282,18 +284,20 @@ nav i:hover{
     line-height: 1.3em;
 }
 .class-info{
-    /**/
     grid-column: 2;
 
     border-radius: 10px;
 
     color: var(--primary-txt);
     background-color: var(--card-bg);
+
+    box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
 }
 .class-info h3{
     text-align: center;
     padding-top: 10px;
     font-family: "Cinzel Decorative";
+    font-size: 1em;
 }
 .class-table{
     grid-column: 2;
