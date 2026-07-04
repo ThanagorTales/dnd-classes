@@ -293,11 +293,11 @@ nav i:hover{
 
     box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
 }
-.class-info h3{
+.class-info h2{
     text-align: center;
     padding-top: 10px;
     font-family: "Cinzel Decorative";
-    font-size: 1em;
+    font-size: 1.2em;
 }
 .traits-table{
     font-family: "Noto Sans";
@@ -305,10 +305,15 @@ nav i:hover{
 
     border: none;
     border-collapse: collapse;
-    padding: 5px;    
-}
-.traits-table td{
+    padding: 5px;   
     
+    margin-top: 10px;
+}
+.traits-table th{
+    width: auto;
+}
+.traits-table th, .traits-table td{
+    padding: 10px;
 }
 .traits-table tr:nth-child(even){
     background-color: var(--primary-bg);
