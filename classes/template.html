@@ -3,65 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DnD Classes</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="shortcut icon" href="images/logo-favicon.png" type="image/x-icon">
+    <title>Bárbaro</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="shortcut icon" href="../images/logo-favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/31468f7d11.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
     <header>
-        <a href="index.html" class="header-img"><img src="images/logo-150.png" alt="DnD Logo" ></a>
+        <a href="../index.html" class="header-img"><img src="../images/logo-150.png" alt="DnD Logo" ></a>
         <!--<nav>   FUTURE MENU
            <i class="fa-solid fa-bars"></i>
         </nav> -->
     </header>
     
-    <main>
-        <div id="banner">
-            <div class="banner-text">
-                <h1>CRIE UMA <br>NOVA HISTORIA !</h1>
-            </div>
-            <div class="banner-btn-container">
-                <input type="button" value="CRIE UM NOVO PERSONAGEM" class="btn-banner">
-            </div>
-        </div>
-        <div id="class-display">
-            <div class="class-description">
-                <h1 id="class-title">Bárbaro:</h1>
-                <p id="class-text">Guerreiro feroz que luta com força bruta e em fúria para resistir a golpes e causar enorme dano. Usa armas pesadas, pouca armadura e inspira a imagem de um combatente selvagem, destemido e quase impossível de parar em batalha.</p>
-                <input type="button" value="SAIBA MAIS..." class="class-btn">
-            </div>
-            
-            
-        </div>
-        <div id="classes-cards">
-            <button class="class-card choosen" data-class="barbarian">
-                <img src="images/class-logos/barbarian-icon.png" alt="Barbarian Icon" class="class-icon"></button>
-            <button class="class-card" data-class="bard">
-                <img src="images/class-logos/bard-icon.png" alt="Bard Icon" class="class-icon"></button>
-            <button class="class-card" data-class="cleric">
-                <img src="images/class-logos/cleric-icon.png" alt="Cleric Icon" class="class-icon"></button>
-            <button class="class-card" data-class="druid">
-                <img src="images/class-logos/druid-icon.png" alt="Druid Icon" class="class-icon"></button>
-            <button class="class-card" data-class="fighter">
-                <img src="images/class-logos/fighter-icon.png" alt="Fighter Icon" class="class-icon"></button>
-            <button class="class-card" data-class="monk">
-                <img src="images/class-logos/monk-icon.png" alt="Monk Icon" class="class-icon"></button>
-            <button class="class-card" data-class="paladin">
-                <img src="images/class-logos/paladin-icon.png" alt="Paladin Icon" class="class-icon"></button>
-            <button class="class-card" data-class="ranger">
-                <img src="images/class-logos/ranger-icon.png" alt="Ranger Icon" class="class-icon"></button>
-            <button class="class-card" data-class="rogue" >
-                <img src="images/class-logos/rogue-icon.png" alt="Rogue Icon" class="class-icon"></button>
-            <button class="class-card" data-class="sorcerer">
-                <img src="images/class-logos/sorcerer-icon.png" alt="Sorcerer Icon" class="class-icon"></button>
-            <button class="class-card" data-class="warlock">
-                <img src="images/class-logos/warlock-icon.png" alt="Warlock Icon" class="class-icon"></button>
-            <button class="class-card" data-class="wizard">
-                <img src="images/class-logos/wizard-icon.png" alt="Wizard Icon" class="class-icon"></button>        
-        </div>
+    <main id="class-main">
+       <section class="class-img">
+        <img src="../images/class-portrait/barbarian-portrait.jpg" alt="">
+       </section>
+       <section class="class-description">
+        <h1>Bárbaro:</h1>
+        <p>O <strong>Bárbaro</strong> é a personificação da força bruta e da determinação inabalável. Em vez de confiar em magia, técnicas refinadas ou armaduras pesadas, ele enfrenta seus inimigos de frente, transformando sua fúria em uma arma devastadora. Quando entra em combate, sua <strong>fúria </strong>lhe permite suportar golpes que derrubariam qualquer outro guerreiro e revidar com ataques capazes de partir escudos, monstros e muralhas.</p>
+
+        <p>Apesar da imagem de um guerreiro selvagem, um bárbaro não precisa ser irracional ou incivilizado. Ele pode ser um caçador das terras geladas, um guerreiro tribal, um nômade das montanhas ou até um herói que aprendeu a sobreviver em um mundo cruel. O que todos compartilham é uma conexão com seus instintos e uma resistência física extraordinária.</p> 
+        
+        <p>Em um grupo de aventureiros, o bárbaro costuma assumir a linha de frente. Ele protege aliados ao atrair a atenção dos inimigos, suporta grandes quantidades de dano e abre caminho pela força quando a situação exige. É uma classe ideal para quem gosta de enfrentar o perigo de frente, causar muito dano em combate corpo a corpo e sentir a emoção de vencer pela pura determinação.</p>
+
+       </section>
+       <section class="class-info">
+        <h2>Traços Básicos:</h2>
+        <table class="traits-table">
+            <tr>
+                <th><strong>Atributo Principal</strong></th>
+                <td>Força</td>
+            </tr>
+            <tr>
+                <th><strong>Dados de Vida</strong></th>
+                <td>D12 por nível</td>
+            </tr>
+            <tr>
+                <th><strong>Salvaguardas</strong></th>
+                <td>Força e Constituição</td>
+            </tr>
+            <tr>
+                <th><strong>Perícias</strong></th>
+                <td>Escolha 2: Atletismo, Intimidação, Lidar com  Animais, Natureza, Percepção ou Sobrevivência</td>
+            </tr>
+            <tr>
+                <th><strong>Proficiências com Armas</strong></th>
+                <td>Armas Simples e Marciais</td>
+            </tr>
+            <tr>
+                <th><strong>Treinamento com Armaduras</strong></th>
+                <td>Leves e Média e Escudos</td>
+            </tr>
+            <tr>
+                <th><strong>Equipamento Inicial</strong></th>
+                <td>Escolha A ou B: (A) 4 Machadinhas, Machado Grande, Kit de Aventureiro e 15 PO; ou (B) 75 PO</td>
+            </tr>
+        </table>
+       </section>
+       <section class="class-traits">
+        
+       </section>
     </main>
+   
     <footer>
         <p>Mock site made by <a href="https://github.com/ThanagorTales" target="_blank">Thales Chaves</a></p>
     </footer>

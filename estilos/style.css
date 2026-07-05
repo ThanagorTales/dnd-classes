@@ -278,7 +278,7 @@ nav i:hover{
     font-family: "Cinzel Decorative";
 }
 
-.class-description p, .class-info p{
+.class-description p, .class-info p, .class-traits p, .class-quote p{
     text-indent: 1.5em;
     padding: 10px;
     font-family: "Noto Sans";
@@ -296,7 +296,7 @@ nav i:hover{
 }
 .class-info h2{
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
     font-family: "Cinzel Decorative";
     font-size: 1.2em;
 }
@@ -320,12 +320,37 @@ nav i:hover{
     background-color: var(--primary-bg);
 }
 
-
-.class-table{
+.class-traits{
     grid-column: 2;
 
     border-radius: 10px;
-    background-color: darkorange;
+
+    color: var(--primary-txt);
+    background-color: var(--card-bg);
+
+    box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
+}
+.class-traits h2{
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Cinzel Decorative";
+    font-size: 1.2em;
+}
+.class-traits h3{
+    font-family: "Cinzel Decorative";
+    font-size: 1.1em;
+    margin: 5px 15px;
+}
+
+.class-quote{
+    grid-column: 2;
+
+    border-radius: 10px;
+
+    color: var(--primary-txt);
+    background-color: var(--card-bg);
+
+    box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
 }
 /*------------- END class main -------------*/
 
