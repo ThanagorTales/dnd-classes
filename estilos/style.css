@@ -453,11 +453,11 @@ footer a:hover{
         flex: 1;
 
         display: grid;
-        grid-template-columns: minmax(20px, 300px) minmax(300px, 400px) minmax(350px, 1fr) minmax(20px, 300px);
+        grid-template-columns: minmax(20px, 1fr) minmax(350px, 500px) minmax(350px, 500px) minmax(20px, 1fr);
 
-        grid-template-rows: 400px;
+        grid-template-rows: auto 1fr;
 
-        gap: 10px;    
+        gap: 10px;       
     }
 
     #class-img{
