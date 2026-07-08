@@ -50,8 +50,6 @@ body{
     background-color: var(--primary-bg);
     
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 header{
 
@@ -244,15 +242,16 @@ nav i:hover{
     display: grid;
     grid-template-columns: auto 90vw auto;
     min-height: 90vh;
-    row-gap: 10px;
-
+    gap: 10px;
+    margin-top: 10px;
+}
+#class-sidebar{
+    grid-column: 2;
 }
 #class-img{
-    grid-column: 2;
-
     margin-top: 10px;
     border-radius: 10px;
-    min-height: 300px;
+    height: 250px;
 
     overflow: hidden;
 }
@@ -261,6 +260,7 @@ nav i:hover{
     height: 100%;
     object-fit: cover;
     object-position: center top;
+    
 }
 #class-description{
     grid-column: 2;
@@ -293,6 +293,7 @@ nav i:hover{
     background-color: var(--card-bg);
 
     box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
+    margin-top: 10px;
 }
 #class-info h2{
     text-align: center;
@@ -397,7 +398,7 @@ footer a:hover{
         flex: 1;
 
         display: grid;
-        grid-template-columns: minmax(20px, 1fr) minmax(350px, 500px) minmax(350px, 500px) minmax(20px, 1fr);
+        grid-template-columns: auto minmax(350px, 500px) minmax(350px, 500px) auto;
 
         grid-template-rows: auto 1fr;
 
