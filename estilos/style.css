@@ -311,7 +311,6 @@ nav i:hover{
     border-collapse: collapse;
     padding: 5px;   
     
-    margin-top: 10px;
 }
 #traits-table th{
     width: auto;
@@ -467,7 +466,7 @@ footer a:hover{
 
     }
     #class-img{
-    height: 400px;
+    height: 350px;
 }
     #class-content{
         grid-column: 3 / 4 ;
@@ -485,10 +484,6 @@ footer a:hover{
     #class-info h2{
        padding-top: 15px;
        margin-top: 10px;
-    }
-
-    #class-traits{
-        margin-top: 20px;
     }
 
     #class-quote{
