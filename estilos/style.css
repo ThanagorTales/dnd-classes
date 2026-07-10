@@ -480,6 +480,7 @@ footer a:hover{
     #class-info{
         grid-area: 2 / 3 / 3 / 4;
         margin-top: 10px;
+        overflow: hidden;
     }
     #class-info h2{
        padding-top: 15px;
