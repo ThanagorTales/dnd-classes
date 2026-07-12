@@ -69,20 +69,50 @@ header{
     align-self: center;
 }
 
-
-header nav{
-    grid-column: -2 / 4;
-    justify-self: center;
-    align-self: center;
-}
-nav i{
-    color: var(--accent);
-    font-size: 1.5em;
-}
-nav i:hover{
-    color: var(--accent-hover);
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-txt);
     cursor: pointer;
+    font-size: 2rem;
+
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
 }
+
+#header-menu{
+    position: fixed;
+    top: 0;
+    right: -300px; /* hidden */
+    width: 250px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--secondary-bg);
+
+    transition: right .3s ease;
+    z-index: 1000;
+}
+#header-menu.open {
+    right: 0;
+}
+#header-menu a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    padding: 1rem;
+    color: var(--primary-txt);
+    text-decoration: none;
+}
+#header-menu a:hover{
+        color: var(--primary-bg);
+        cursor: pointer;
+        background-color: var(--secondary-txt);
+    }
 /*------------- START index main -------------*/
 #index-main{
     flex: 1;
@@ -378,7 +408,7 @@ footer a:hover{
 
 @media screen and (min-width: 768px){
     header{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
     header .header-img{
         grid-column: 2 / 3;
@@ -391,11 +421,45 @@ footer a:hover{
         
         grid-column: 1 / 2;
     }
-    header nav{
-        grid-column: 3 / 4;
+    #header-menu{
+        position: static;
+        width: auto;
+        height: auto;
 
         display: flex;
+        flex-direction: row;
+
+        right: auto;
+        background: none;
+
+        grid-column: 3 / 5;
+        
     }
+    #menu-toggle {
+        display: none;
+    }
+     #header-menu a{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        padding: 1em;
+        text-decoration: none;
+        color: var(--primary-txt);
+        font-family: "nono-sans";
+        font-weight: bold;
+
+        border-radius: 10px;
+        transition: background-color .3s;
+        gap: .5em;
+    }   
+     #header-menu a:hover{
+        color: var(--primary-bg);
+        cursor: pointer;
+        background-color: var(--secondary-txt);
+    }
+
     /*------------- START index main -------------*/
     #index-main{
         flex: 1;
@@ -434,7 +498,7 @@ footer a:hover{
         box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
         font-weight: bold;
         font-size: 1.5em;
-} 
+    } 
     .btn-banner:hover{
         background-color: var(--accent-hover);
         border: 2px solid var(--secondary-txt);
@@ -467,7 +531,7 @@ footer a:hover{
     }
     #class-img{
     height: 350px;
-}
+    }
     #class-content{
         grid-column: 3 / 4 ;
     }
