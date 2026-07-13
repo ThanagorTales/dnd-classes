@@ -6,10 +6,18 @@ const initiativeInput = document.getElementById('initiative');
 const acInput = document.getElementById('ac');
 const hpInput = document.getElementById('hp');
 
+const startBtn = document.getElementById("start-btn");
+const nextTurnBtn = document.getElementById("nextTurn-btn");
+const previousTurnBtn = document.getElementById("previousTurn-btn");
+const roundTxt = document.getElementById('round');
+
 let charList = [];
 
 let nextId = 1;
 let editingId = null;
+let currentTurn = 0;
+let currentRound = 1;
+let combatStarted = false;
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -44,10 +52,87 @@ form.reset();
 
 });
 
+startBtn.addEventListener('click', (event) =>{
+    if (charList.length === 0) return;
+
+    combatStarted = true;
+    currentTurn = 0;
+    currentRound = 1;
+    startBtn.textContent = "autorenew";
+    renderTable();
+})
+
+
+nextTurnBtn.addEventListener('click', () =>{
+    nextTurn();
+})
+
+previousTurnBtn.addEventListener('click', () =>{
+    previousTurn();
+})
+
+tableBody.addEventListener('click', (event) => {
+    const row = event.target.closest('tr');
+    if(!row) return;
+    const id = Number(row.dataset.id);
+
+    if(event.target.classList.contains("delete-btn")){
+        charList = charList.filter(char => char.id !== id);
+        if (charList.length === 0){
+            combatStarted = false;
+            currentTurn = 0;
+            currentRound = 1;
+            startBtn.textContent = "play_arrow";
+        }
+
+        renderTable();
+    }
+   if(event.target.classList.contains("edit-btn")){
+        const character = charList.find(char => char.id === id);
+        editingId = character.id;
+
+        initiativeInput.value = character.initiative;
+        charInput.value = character.name;
+        acInput.value = character.ac;
+        hpInput.value = character.hp;
+
+   }
+  
+})
+
+function nextTurn(){
+    if (charList.length === 0) return;
+
+    if(currentTurn < charList.length - 1){
+        currentTurn++;
+    } else {
+        currentTurn = 0;
+        currentRound++;
+    }
+    renderTable();
+}
+function previousTurn(){
+    if (charList.length === 0) return;
+
+    if(currentTurn > 0){
+        currentTurn--;
+    } else {
+        currentTurn = charList.length - 1;
+        if (currentRound > 1) {
+            currentRound--;
+        }
+    }
+    
+    renderTable();
+    console.log(currentTurn, currentRound);
+}
 function renderTable() {
     tableBody.innerHTML = ''; 
     charList.forEach((char, index) => {
         const row = document.createElement('tr');
+        if(index === currentTurn && combatStarted === true){
+            row.classList.add("active-turn");
+        }
         row.dataset.id = char.id;
         row.innerHTML = `
             <td>${index + 1 }</td>
@@ -66,31 +151,7 @@ function renderTable() {
             </td>
         `;
         tableBody.appendChild(row);
-        
     })
+    roundTxt.innerHTML = currentRound;
 }
 
-tableBody.addEventListener('click', (event) => {
-    const row = event.target.closest('tr');
-    if(!row) return;
-    const id = Number(row.dataset.id);
-
-    if(event.target.classList.contains("delete-btn")){
-        charList = charList.filter(char => char.id !== id);
-        renderTable();
-        
-    }
-   if(event.target.classList.contains("edit-btn")){
-        const character = charList.find(char => char.id === id);
-        editingId = character.id;
-
-        initiativeInput.value = character.initiative;
-        charInput.value = character.name;
-        acInput.value = character.ac;
-        hpInput.value = character.hp;
-
-   }
-  
-})
-
-console.log(charList);
