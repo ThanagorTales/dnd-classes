@@ -83,6 +83,10 @@ tableBody.addEventListener('click', (event) => {
             currentTurn = 0;
             currentRound = 1;
             startBtn.textContent = "play_arrow";
+        } else {
+            if(currentTurn >= charList.length){
+                currentTurn = charList.length - 1;
+            }    
         }
 
         renderTable();
@@ -132,6 +136,7 @@ function renderTable() {
         const row = document.createElement('tr');
         if(index === currentTurn && combatStarted === true){
             row.classList.add("active-turn");
+            
         }
         row.dataset.id = char.id;
         row.innerHTML = `
