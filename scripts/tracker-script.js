@@ -10,6 +10,7 @@ const startBtn = document.getElementById("start-btn");
 const nextTurnBtn = document.getElementById("nextTurn-btn");
 const previousTurnBtn = document.getElementById("previousTurn-btn");
 const roundTxt = document.getElementById('round');
+const addBtn = document.getElementById('add-save');
 
 let charList = [];
 
@@ -27,6 +28,18 @@ form.addEventListener('submit', (event) => {
     const ac = parseInt(acInput.value);
     const hp = parseInt(hpInput.value);
    
+    if(
+        name === "" || isNaN(initiative)|| isNaN(ac)|| isNaN(hp)
+    ){
+        alert("Preencha todos os campos.");
+        return;
+    }  
+    
+    if(initiative < 0 || ac < 0 || hp < 0){
+            alert("Valores inválidos.");
+            return;
+    }
+    
     if(editingId === null){
         const character = {
         id: nextId++,
@@ -36,6 +49,7 @@ form.addEventListener('submit', (event) => {
         hp
         };
         charList.push(character);
+        
     } else {
         const character = charList.find(char => char.id === editingId);
         character.name = name;
@@ -44,11 +58,13 @@ form.addEventListener('submit', (event) => {
         character.hp = hp;
 
         editingId = null;
+
+        addBtn.textContent = "Adicionar Combatente";
     }
 
-charList.sort((a,b)=> b.initiative - a.initiative);
-renderTable();
-form.reset();
+    charList.sort((a,b)=> b.initiative - a.initiative);
+    renderTable();
+    form.reset();
 
 });
 
@@ -77,6 +93,10 @@ tableBody.addEventListener('click', (event) => {
     const id = Number(row.dataset.id);
 
     if(event.target.classList.contains("delete-btn")){
+        const character = charList.find(char => char.id === id);
+        const confirmed = confirm(`Excluir ${character.name}?`);
+        if(!confirmed) return;
+        
         charList = charList.filter(char => char.id !== id);
         if (charList.length === 0){
             combatStarted = false;
@@ -99,7 +119,7 @@ tableBody.addEventListener('click', (event) => {
         charInput.value = character.name;
         acInput.value = character.ac;
         hpInput.value = character.hp;
-
+        addBtn.textContent = "Salvar Alterações";
    }
   
 })
@@ -136,13 +156,19 @@ function renderTable() {
         const row = document.createElement('tr');
         if(index === currentTurn && combatStarted === true){
             row.classList.add("active-turn");
-            
         }
+
+        let skullIcon = "";
+        if(char.hp <= 0){
+            row.classList.add("dead-character");
+            skullIcon = `<span class="material-symbols-outlined">skull</span>`;
+        }
+
         row.dataset.id = char.id;
         row.innerHTML = `
             <td>${index + 1 }</td>
             <td>${char.initiative}</td>
-            <td>${char.name}</td>
+            <td>${skullIcon} ${char.name}</td>
             <td>${char.ac}</td>
             <td>${char.hp}</td>
             <td>

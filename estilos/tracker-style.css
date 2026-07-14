@@ -41,3 +41,13 @@
     font-weight:bold;
     color: var(--primary-txt);
 }
+.dead-character{
+    opacity: .5;
+    text-decoration: line-through;
+}
+.dead-icon{
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 4px;
+
+}
