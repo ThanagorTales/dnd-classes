@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DnD Classes</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/tracker-style.css">
     <link rel="shortcut icon" href="images/logo-favicon.png" type="image/x-icon">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
-    <link rel="stylesheet" href="estilos/tracker-style.css">
+    
     
 </head>
 <body>
@@ -17,7 +18,7 @@
         <span class="material-symbols-outlined">menu</span>
         </button>
         <nav id="header-menu">
-           <a href="#"><span class="material-symbols-outlined">swords</span> TRACKER</a>
+           <a href="tracker.html"><span class="material-symbols-outlined">swords</span> TRACKER</a>
            <a href="#"><span class="material-symbols-outlined">workspace_premium</span> CLASSES</a>
            <a href="#"><span class="material-symbols-outlined">account_box</span> ESPÉCIES</a>
            <a href="#"><span class="material-symbols-outlined">assignment</span> PERSONAGENS</a>
@@ -25,6 +26,49 @@
         </nav> 
     </header>
     
+    <main id="tracker-main">
+        <section id="card-section">
+            <section id="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ORDEM</th>
+                            <th>INICIATIVA</th>
+                            <th>PERSONAGEM</th>
+                            <th>CA</th>
+                            <th>HP</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+            
+                    </tbody>
+                </table>
+            </section>
+            
+             <section id="nav">
+                    <button id="start-btn" class="material-symbols-outlined">play_arrow</button>
+                    <button id="previousTurn-btn" class="material-symbols-outlined">arrow_left_alt</button>
+                    <button id="nextTurn-btn" class="material-symbols-outlined">arrow_right_alt</button>
+                    <div id="combat-info">
+                        <p>RODADA: <span id="round">1</span></p>
+                    </div>
+                </section>
+        </section>
+         <section id="tracker-input">
+                <form id="tracker-form">
+                    <label for="character">PERSONAGEM:</label>
+                    <input type="text" id="character" name="character">
+                    <label for="initiative">INICIATIVA:</label>
+                    <input type="number" id="initiative" name="initiative">
+                    <label for="ac">C.A.:</label>
+                    <input type="number" id="ac" name="ac">
+                    <label for="hp">H.P.:</label>
+                    <input type="number" id="hp" name="hp">
+                    <button id="add-save" type="submit">ADICIONAR PERSONAGEM</button>
+                </form>
+            </section>
+    </main>
     
     <footer>
         <p>Mock site made by <a href="https://github.com/ThanagorTales" target="_blank">Thales Chaves</a></p>
