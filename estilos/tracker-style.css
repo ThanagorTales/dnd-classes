@@ -100,6 +100,47 @@ th{
 td{
     color:var(--secondary-txt);
 }
+.actions-cell{
+    position:relative;
+}
+.action-menu{
+    position:absolute;
+
+    top:100%;
+    right:0;
+
+    display:flex;
+    flex-direction:column;
+
+    background:var(--card-bg);
+
+    border:1px solid var(--borders);
+
+    border-radius:8px;
+
+    z-index:100;
+}
+.action-menu button{
+    display:flex;
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.6rem;
+
+    border:none;
+    background:none;
+
+    color:var(--primary-txt);
+
+    cursor:pointer;
+}
+.hidden{
+    display:none;
+}
+.menu-btn{
+    display:block;
+}
 .edit-btn,
 .delete-btn{
     padding:0;
@@ -113,6 +154,8 @@ td{
     cursor:pointer;
     color:var(--primary-txt);
     font-size:1rem;
+
+    display:none;
 }
 
 

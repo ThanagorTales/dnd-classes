@@ -89,40 +89,63 @@ previousTurnBtn.addEventListener('click', () =>{
 
 tableBody.addEventListener('click', (event) => {
     const row = event.target.closest('tr');
-    if(!row) return;
+    if (!row) return;
+
     const id = Number(row.dataset.id);
 
-    if(event.target.classList.contains("delete-btn")){
-        const character = charList.find(char => char.id === id);
-        const confirmed = confirm(`Excluir ${character.name}?`);
-        if(!confirmed) return;
-        
+    // ===== MENU ⋮ =====
+    if (event.target.classList.contains("menu-btn")) {
+
+        const menu = row.querySelector(".action-menu");
+        const isHidden = menu.classList.contains("hidden");
+
+        // Fecha todos os menus
+        document.querySelectorAll(".action-menu").forEach(menu => {
+            menu.classList.add("hidden");
+        });
+
+        // Se estava fechado, abre apenas este
+        if (isHidden) {
+            menu.classList.remove("hidden");
+        }
+
+        return;
+    }
+
+    // ===== EXCLUIR =====
+    if (event.target.closest(".delete-btn")) {
+
         charList = charList.filter(char => char.id !== id);
-        if (charList.length === 0){
+
+        if (charList.length === 0) {
             combatStarted = false;
             currentTurn = 0;
             currentRound = 1;
             startBtn.textContent = "play_arrow";
-        } else {
-            if(currentTurn >= charList.length){
-                currentTurn = charList.length - 1;
-            }    
+        } else if (currentTurn >= charList.length) {
+            currentTurn = charList.length - 1;
         }
 
         renderTable();
+        return;
     }
-   if(event.target.classList.contains("edit-btn")){
+
+    // ===== EDITAR =====
+    if (event.target.closest(".edit-btn")) {
+
         const character = charList.find(char => char.id === id);
+
         editingId = character.id;
 
         initiativeInput.value = character.initiative;
         charInput.value = character.name;
         acInput.value = character.ac;
         hpInput.value = character.hp;
+
         addBtn.textContent = "Salvar Alterações";
-   }
-  
-})
+    }
+
+});
 
 function nextTurn(){
     if (charList.length === 0) return;
@@ -171,14 +194,22 @@ function renderTable() {
             <td>${skullIcon} ${char.name}</td>
             <td>${char.ac}</td>
             <td>${char.hp}</td>
-            <td>
-                <button class="edit-btn material-symbols-outlined">
-                       edit 
+            <td class="actions-cell">
+                <button class="menu-btn material-symbols-outlined">
+                    more_vert
                 </button>
 
-                <button class="delete-btn material-symbols-outlined">
-                    close 
-                </button>
+                <div class="action-menu hidden">
+                    <button class="edit-btn">
+                        <span class="material-symbols-outlined">edit</span>
+                        Editar
+                    </button>
+
+                    <button class="delete-btn">
+                        <span class="material-symbols-outlined">delete</span>
+                        Excluir
+                    </button>
+                </div>
             </td>
         `;
         tableBody.appendChild(row);
