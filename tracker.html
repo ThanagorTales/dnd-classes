@@ -27,46 +27,47 @@
     </header>
     
     <main id="tracker-main">
-        <section id="table-section">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ORDEM</th>
-                        <th>INICIATIVA</th>
-                        <th>PERSONAGEM</th>
-                        <th>CA</th>
-                        <th>HP</th>
-                        <th>AÇÕES</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    
-                </tbody>
-            </table>
-            <div id="nav">
-                <button id="start-btn" class="material-symbols-outlined">play_arrow</button>
-                <button id="previousTurn-btn" class="material-symbols-outlined">arrow_left_alt</button>
-                <button id="nextTurn-btn" class="material-symbols-outlined">arrow_right_alt</button>
-                <div id="combat-info">
-                    <p>RODADA: <span id="round">1</span></p>
-                </div>
-            </div>
+        <section id="card-section">
+            <section id="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ORDEM</th>
+                            <th>INICIATIVA</th>
+                            <th>PERSONAGEM</th>
+                            <th>CA</th>
+                            <th>HP</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+            
+                    </tbody>
+                </table>
+            </section>
+            
+             <section id="nav">
+                    <button id="start-btn" class="material-symbols-outlined">play_arrow</button>
+                    <button id="previousTurn-btn" class="material-symbols-outlined">arrow_left_alt</button>
+                    <button id="nextTurn-btn" class="material-symbols-outlined">arrow_right_alt</button>
+                    <div id="combat-info">
+                        <p>RODADA: <span id="round">1</span></p>
+                    </div>
+                </section>
         </section>
-        
-        <section id="tracker-input">
-            <form id="tracker-form">
-                <label for="character">Combatente:</label>
-                <input type="text" id="character" name="character">
-                <label for="initiative">Iniciativa:</label>
-                <input type="number" id="initiative" name="initiative">
-                <label for="ac">Classe de Armadura:</label>
-                <input type="number" id="ac" name="ac">
-                <label for="hp">Pontos de Vida:</label>
-                <input type="number" id="hp" name="hp">
-                <button id="add-save" type="submit">Adicionar Combatente</button>
-            </form>
-        </section>
-        
+         <section id="tracker-input">
+                <form id="tracker-form">
+                    <label for="character">PERSONAGEM:</label>
+                    <input type="text" id="character" name="character">
+                    <label for="initiative">INICIATIVA:</label>
+                    <input type="number" id="initiative" name="initiative">
+                    <label for="ac">C.A.:</label>
+                    <input type="number" id="ac" name="ac">
+                    <label for="hp">H.P.:</label>
+                    <input type="number" id="hp" name="hp">
+                    <button id="add-save" type="submit">ADICIONAR PERSONAGEM</button>
+                </form>
+            </section>
     </main>
     
     <footer>
