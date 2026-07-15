@@ -138,6 +138,7 @@ td{
 
     background:var(--card-bg);
     color:var(--primary-txt);
+    box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
 }
 #add-save{
     grid-column:1 / -1;
@@ -160,7 +161,7 @@ td{
     font-weight: bold;
 
     box-shadow: inset 0 0 8px rgba(255,255,255,.3);
-     transition: .2s;
+    transition: .2s;
 }
 .active-turn td:first-child{
     border-left:4px solid var(--secondary-txt);

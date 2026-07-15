@@ -98,8 +98,13 @@ tableBody.addEventListener('click', (event) => {
 
     if (event.target.closest(".delete-btn")) {
 
-        charList = charList.filter(char => char.id !== id);
+        const character = charList.find(char => char.id === id);
 
+        if (!confirm(`Deseja realmente excluir "${character.name}"?`)) {
+            return;
+        }
+
+        charList = charList.filter(char => char.id !== id);
         if (charList.length === 0) {
             combatStarted = false;
             currentTurn = 0;
