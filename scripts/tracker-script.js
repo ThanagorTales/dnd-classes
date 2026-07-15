@@ -16,9 +16,12 @@ let charList = [];
 
 let nextId = 1;
 let editingId = null;
+
 let currentTurn = 0;
 let currentRound = 1;
+
 let combatStarted = false;
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -59,7 +62,7 @@ form.addEventListener('submit', (event) => {
 
         editingId = null;
 
-        addBtn.textContent = "Adicionar Combatente";
+        addBtn.textContent = "ADICIONAR PERSONAGEM";
     }
 
     charList.sort((a,b)=> b.initiative - a.initiative);
@@ -93,26 +96,6 @@ tableBody.addEventListener('click', (event) => {
 
     const id = Number(row.dataset.id);
 
-    // ===== MENU ⋮ =====
-    if (event.target.classList.contains("menu-btn")) {
-
-        const menu = row.querySelector(".action-menu");
-        const isHidden = menu.classList.contains("hidden");
-
-        // Fecha todos os menus
-        document.querySelectorAll(".action-menu").forEach(menu => {
-            menu.classList.add("hidden");
-        });
-
-        // Se estava fechado, abre apenas este
-        if (isHidden) {
-            menu.classList.remove("hidden");
-        }
-
-        return;
-    }
-
-    // ===== EXCLUIR =====
     if (event.target.closest(".delete-btn")) {
 
         charList = charList.filter(char => char.id !== id);
@@ -130,7 +113,6 @@ tableBody.addEventListener('click', (event) => {
         return;
     }
 
-    // ===== EDITAR =====
     if (event.target.closest(".edit-btn")) {
 
         const character = charList.find(char => char.id === id);
@@ -142,7 +124,7 @@ tableBody.addEventListener('click', (event) => {
         acInput.value = character.ac;
         hpInput.value = character.hp;
 
-        addBtn.textContent = "Salvar Alterações";
+        addBtn.textContent = "SALVAR ALTERAÇÕES";
     }
 
 });
@@ -182,34 +164,27 @@ function renderTable() {
         }
 
         let skullIcon = "";
+        let deadClass = "";
+        
         if(char.hp <= 0){
-            row.classList.add("dead-character");
+            deadClass = ("dead-character");
             skullIcon = `<span class="material-symbols-outlined">skull</span>`;
         }
 
         row.dataset.id = char.id;
         row.innerHTML = `
-            <td>${index + 1 }</td>
-            <td>${char.initiative}</td>
-            <td>${skullIcon} ${char.name}</td>
+            <td>${char.hp <= 0 ? skullIcon : char.initiative}</td>
+            <td class="${deadClass}">${char.name}</td>
             <td>${char.ac}</td>
             <td>${char.hp}</td>
-            <td class="actions-cell">
-                <button class="menu-btn material-symbols-outlined">
-                    more_vert
+            <td>
+                <button class="edit-btn">
+                    <span class="material-symbols-outlined">edit</span>
                 </button>
 
-                <div class="action-menu hidden">
-                    <button class="edit-btn">
-                        <span class="material-symbols-outlined">edit</span>
-                        Editar
-                    </button>
-
-                    <button class="delete-btn">
-                        <span class="material-symbols-outlined">delete</span>
-                        Excluir
-                    </button>
-                </div>
+                <button class="delete-btn">
+                    <span class="material-symbols-outlined">delete</span>
+                </button>
             </td>
         `;
         tableBody.appendChild(row);
