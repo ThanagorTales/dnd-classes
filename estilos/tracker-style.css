@@ -1,3 +1,9 @@
+body{
+    background-color: var(--primary-bg);
+    
+    min-height: 100vh;
+    
+}
 #tracker-main{
     display: grid;
     grid-template-columns: auto 90vw auto;
