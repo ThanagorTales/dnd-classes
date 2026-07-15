@@ -74,7 +74,7 @@
     
     overflow-x:auto;
 
-
+    min-height:350px;
 }
 table{
     width:100%;
@@ -82,7 +82,7 @@ table{
     border-radius:8px;
     overflow:hidden;
     min-width:250px;
-    margin: 10px 5px;
+    margin: 5px 5px;
 
     font-size: .9rem;
 }
@@ -139,6 +139,7 @@ td{
     background:var(--card-bg);
     color:var(--primary-txt);
     box-shadow: 1px 1px 10px rgba(172, 171, 171, 0.5);
+    margin-top: 10px;
 }
 #add-save{
     grid-column:1 / -1;
