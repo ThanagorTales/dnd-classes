@@ -97,7 +97,7 @@ table{
     border-radius:8px;
     overflow:hidden;
     min-width:250px;
-    margin: 5px 5px;
+    margin: 5px;
 
     font-size: .9rem;
 }
@@ -211,6 +211,7 @@ td{
 
     #card-section{
         grid-area: 1 / 2 / 3 / 3;
+        
     }
 
     #nav button{
@@ -226,5 +227,31 @@ td{
         font-family:"Noto Sans";
         font-size:.9rem;
         font-weight:600;
+    }
+    
+    table{
+    width:100%;
+    border-collapse:collapse;
+    border-radius:8px;
+    overflow:hidden;
+    min-width:250px;
+    margin: 0;
+
+    font-size: 1.1rem;
+    }
+    th,
+    td{
+        padding:.2rem;
+
+        text-align:center;
+        border-bottom:1px solid #333;
+    }
+    th{
+        background:var(--card-bg);
+        color:var(--primary-txt);
+        font-size:1.2rem;
+    }
+    td{
+        color:var(--secondary-txt);
     }
 }

@@ -22,6 +22,8 @@ let currentRound = 1;
 
 let combatStarted = false;
 
+const startIcon = startBtn.querySelector(".material-symbols-outlined");
+const startText = startBtn.querySelector(".btn-text");
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -72,12 +74,15 @@ form.addEventListener('submit', (event) => {
 });
 
 startBtn.addEventListener('click', (event) =>{
+
     if (charList.length === 0) return;
 
     combatStarted = true;
     currentTurn = 0;
     currentRound = 1;
-    startBtn.textContent = "autorenew";
+
+    startIcon.textContent = "autorenew";
+    startText.textContent = "RECOMEÇAR";
     renderTable();
 })
 
@@ -109,7 +114,8 @@ tableBody.addEventListener('click', (event) => {
             combatStarted = false;
             currentTurn = 0;
             currentRound = 1;
-            startBtn.textContent = "play_arrow";
+            startIcon.textContent = "play_arrow";
+            startText.textContent = "COMEÇAR";
         } else if (currentTurn >= charList.length) {
             currentTurn = charList.length - 1;
         }
