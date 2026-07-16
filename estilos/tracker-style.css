@@ -212,6 +212,7 @@ td{
     #card-section{
         grid-area: 1 / 2 / 3 / 3;
         
+        min-width: 350px;
     }
 
     #nav button{
