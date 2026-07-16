@@ -203,14 +203,25 @@ td{
     #tracker-main{
         grid-template-columns: minmax(50px, 200px) 2fr 1fr minmax(50px, 200px); ;
         gap: 15px;
+
+        display: grid;
+        min-height:calc(100vh - 95px);
+
+        align-items:stretch;
     }
 
     #tracker-input{
         grid-area: 1 / 3 / 2 / 4;
+
+        align-self: start;
+        height: fit-content;
     }
 
     #card-section{
         grid-area: 1 / 2 / 3 / 3;
+
+        display:flex;
+        flex-direction:column;
         
     }
 
@@ -253,5 +264,9 @@ td{
     }
     td{
         color:var(--secondary-txt);
+    }
+    #table-section{
+        flex:1;
+        overflow:auto;
     }
 }
